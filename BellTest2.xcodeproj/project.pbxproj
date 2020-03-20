@@ -20,6 +20,7 @@
 		27CC69BD242556EA0063B43C /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC69B8242556EA0063B43C /* Resources.swift */; };
 		27CC69BE242556EA0063B43C /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC69B9242556EA0063B43C /* Json4Swift_Base.swift */; };
 		27CC69C4242589F20063B43C /* Cell Phone Ring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27CC69C3242589F10063B43C /* Cell Phone Ring.wav */; };
+		27CC69C724258CC90063B43C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CC69C624258CC90063B43C /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		27CC69B8242556EA0063B43C /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
 		27CC69B9242556EA0063B43C /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
 		27CC69C3242589F10063B43C /* Cell Phone Ring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cell Phone Ring.wav"; sourceTree = "<group>"; };
+		27CC69C624258CC90063B43C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CC69C724258CC90063B43C /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 			children = (
 				27CC699E24253AE40063B43C /* BellTest2 */,
 				27CC699D24253AE40063B43C /* Products */,
+				27CC69C524258CC90063B43C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +90,14 @@
 				27CC69C3242589F10063B43C /* Cell Phone Ring.wav */,
 			);
 			path = BellTest2;
+			sourceTree = "<group>";
+		};
+		27CC69C524258CC90063B43C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27CC69C624258CC90063B43C /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

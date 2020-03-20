@@ -11,21 +11,16 @@ import UIKit
 class ViewController: UIViewController
 {
     @IBOutlet var buttonTest:UIButton!
-    @IBOutlet var buttonBell:UIButton!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
     
-        buttonBell.layer.cornerRadius = 30
-        buttonBell.layer.borderWidth = 5
-        buttonBell.layer.borderColor = UIColor.black.cgColor
-
         buttonTest.layer.cornerRadius = 30
         buttonTest.layer.borderWidth = 5
         buttonTest.layer.borderColor = UIColor.black.cgColor
     }
-
+    
     @IBAction func buttonClicked(sender:UIButton)
     {
         if let url = URL.init(string:"https://capi.stage.9c9media.com/destinations/tsn_ios/platforms/iPad/contents/69585") {
