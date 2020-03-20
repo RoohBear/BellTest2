@@ -13,6 +13,13 @@
 		27CC69A724253AE40063B43C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CC69A524253AE40063B43C /* Main.storyboard */; };
 		27CC69A924253AE50063B43C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27CC69A824253AE50063B43C /* Assets.xcassets */; };
 		27CC69AC24253AE50063B43C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27CC69AA24253AE50063B43C /* LaunchScreen.storyboard */; };
+		27CC69B424253B600063B43C /* home_yellow_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 27CC69B324253B600063B43C /* home_yellow_background.png */; };
+		27CC69BA242556EA0063B43C /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC69B5242556EA0063B43C /* Authentication.swift */; };
+		27CC69BB242556EA0063B43C /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC69B6242556EA0063B43C /* Images.swift */; };
+		27CC69BC242556EA0063B43C /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC69B7242556EA0063B43C /* Owner.swift */; };
+		27CC69BD242556EA0063B43C /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC69B8242556EA0063B43C /* Resources.swift */; };
+		27CC69BE242556EA0063B43C /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CC69B9242556EA0063B43C /* Json4Swift_Base.swift */; };
+		27CC69C4242589F20063B43C /* Cell Phone Ring.wav in Resources */ = {isa = PBXBuildFile; fileRef = 27CC69C3242589F10063B43C /* Cell Phone Ring.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		27CC69A824253AE50063B43C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27CC69AB24253AE50063B43C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27CC69AD24253AE50063B43C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27CC69B324253B600063B43C /* home_yellow_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home_yellow_background.png; sourceTree = "<group>"; };
+		27CC69B5242556EA0063B43C /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		27CC69B6242556EA0063B43C /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		27CC69B7242556EA0063B43C /* Owner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		27CC69B8242556EA0063B43C /* Resources.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resources.swift; sourceTree = "<group>"; };
+		27CC69B9242556EA0063B43C /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		27CC69C3242589F10063B43C /* Cell Phone Ring.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Cell Phone Ring.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +74,16 @@
 				27CC69A124253AE40063B43C /* SceneDelegate.swift */,
 				27CC69A324253AE40063B43C /* ViewController.swift */,
 				27CC69A524253AE40063B43C /* Main.storyboard */,
+				27CC69B324253B600063B43C /* home_yellow_background.png */,
 				27CC69A824253AE50063B43C /* Assets.xcassets */,
 				27CC69AA24253AE50063B43C /* LaunchScreen.storyboard */,
 				27CC69AD24253AE50063B43C /* Info.plist */,
+				27CC69B5242556EA0063B43C /* Authentication.swift */,
+				27CC69B6242556EA0063B43C /* Images.swift */,
+				27CC69B9242556EA0063B43C /* Json4Swift_Base.swift */,
+				27CC69B7242556EA0063B43C /* Owner.swift */,
+				27CC69B8242556EA0063B43C /* Resources.swift */,
+				27CC69C3242589F10063B43C /* Cell Phone Ring.wav */,
 			);
 			path = BellTest2;
 			sourceTree = "<group>";
@@ -125,8 +146,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CC69B424253B600063B43C /* home_yellow_background.png in Resources */,
 				27CC69AC24253AE50063B43C /* LaunchScreen.storyboard in Resources */,
 				27CC69A924253AE50063B43C /* Assets.xcassets in Resources */,
+				27CC69C4242589F20063B43C /* Cell Phone Ring.wav in Resources */,
 				27CC69A724253AE40063B43C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,8 +162,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				27CC69A424253AE40063B43C /* ViewController.swift in Sources */,
+				27CC69BC242556EA0063B43C /* Owner.swift in Sources */,
+				27CC69BD242556EA0063B43C /* Resources.swift in Sources */,
 				27CC69A024253AE40063B43C /* AppDelegate.swift in Sources */,
+				27CC69BB242556EA0063B43C /* Images.swift in Sources */,
+				27CC69BE242556EA0063B43C /* Json4Swift_Base.swift in Sources */,
 				27CC69A224253AE40063B43C /* SceneDelegate.swift in Sources */,
+				27CC69BA242556EA0063B43C /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
