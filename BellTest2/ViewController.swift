@@ -16,6 +16,7 @@ class ViewController: UIViewController
     {
         super.viewDidLoad()
     
+        // I have a little more attention to detail :-)
         buttonTest.layer.cornerRadius = 30
         buttonTest.layer.borderWidth = 5
         buttonTest.layer.borderColor = UIColor.black.cgColor
@@ -41,7 +42,8 @@ class ViewController: UIViewController
                     if let strLastModifiedDateTime = parsedData.lastModifiedDateTime {
                         // parsedData.lastModifiedDateTime is a String that needs to be converted to a Date. I had some
                         // difficulty getting the parser to recognize the date (see my comment on line 31 of Json4Swift_Base.swift),
-                        // so let's convert the string to an actual Date object
+                        // so let's convert the string to an actual Date object.  Yeah, I could display the string
+                        // as-is, but if I convert it to a Date, iOS displays it nicer.
                         let dateFormatter = DateFormatter()
                         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
                         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
