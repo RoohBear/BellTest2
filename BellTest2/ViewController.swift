@@ -33,8 +33,7 @@ class ViewController: UIViewController
                 let theData = try Data.init(contentsOf:url)
                     
                 do {
-                    // This single line of code uses the Codable feature of Swift to parse safeData into self.configData.
-                    // See how the ConfigAPIData class is written and hopefully it will all make sense!
+                    // This single line of code uses the Codable feature of Swift to parse theData into parsedData.
                     let parsedData = try JSONDecoder().decode(Json4Swift_Base.self, from:theData)
                     print("Yay! Loaded OK")
 
