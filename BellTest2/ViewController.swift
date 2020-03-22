@@ -8,8 +8,21 @@
 
 import UIKit
 
+// my little extension to String that converts a string to a Date object
+extension String
+{
+    func stringToDate() -> Date!
+    {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return dateFormatter.date(from:self)
+    }
+}
+
 class ViewController: UIViewController
 {
+    @IBOutlet var switchUseCodable:UISwitch!
     @IBOutlet var buttonTest:UIButton!
 
     override func viewDidLoad()
@@ -23,6 +36,43 @@ class ViewController: UIViewController
     }
     
     @IBAction func buttonClicked(sender:UIButton)
+    {
+        if let theSwitch = self.switchUseCodable {
+            if theSwitch.isOn {
+                self.doCodableTechnique()
+            }else{
+                self.doSimplerTechnique()
+            }
+        }
+    }
+
+    // this does the job in as few lines as I could do
+    func doSimplerTechnique()
+    {
+        if let url = URL.init(string:"https://capi.stage.9c9media.com/destinations/tsn_ios/platforms/iPad/contents/69585") {
+             do {
+                 // This single line downloads the feed and stores it into data.
+                 // This is the quick-and-dirty way. The better way is to use NSURLRequest and make a task to get the data
+                 // because it runs the background, can be modified to do POST or GET, can put stuff in the headers for
+                 // security, etc.
+                 let theData = try Data.init(contentsOf:url)
+                     
+                 do {
+                    let dataDecoded = try JSONSerialization.jsonObject(with:theData, options:.mutableLeaves)
+                    if let dictData = dataDecoded as? NSDictionary {
+                        if let dateWanted = dictData["LastModifiedDateTime"] as? String {
+                            self.displayAlert(dateWanted)
+                        }
+                    }
+                }
+            }catch{
+            }
+        }
+    }
+
+    // this does the job using Codable, and uses my extension of String
+    // that converts the date to a Date object
+    func doCodableTechnique()
     {
         if let url = URL.init(string:"https://capi.stage.9c9media.com/destinations/tsn_ios/platforms/iPad/contents/69585") {
             do {
@@ -39,14 +89,7 @@ class ViewController: UIViewController
 
                     // if we get here, parsedData contains the entire feed
                     if let strLastModifiedDateTime = parsedData.lastModifiedDateTime {
-                        // parsedData.lastModifiedDateTime is a String that needs to be converted to a Date. I had some
-                        // difficulty getting the parser to recognize the date (see my comment on line 31 of Json4Swift_Base.swift),
-                        // so let's convert the string to an actual Date object.  Yeah, I could display the string
-                        // as-is, but if I convert it to a Date, iOS displays it nicer.
-                        let dateFormatter = DateFormatter()
-                        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-                        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-                        if let date = dateFormatter.date(from:strLastModifiedDateTime) {
+                        if let date = strLastModifiedDateTime.stringToDate() {
                             let messageToDisplay = "The date in the JSON is \(date)"
                             self.displayAlert(messageToDisplay)
                         }
